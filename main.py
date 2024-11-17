@@ -1,16 +1,33 @@
-# This is a sample Python script.
+# def test_func(*params):
+#     print("Тип:", type(params))
+#     print("Аргумент:", params)
+# test_func(1,2,2,3,3,4)
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# def summator(txt, *values, type = "sum"):
+#     s = 0
+#     for i in values:
+#         s +=i
+#     return f'{txt} {s} {type}'
+#
+# print(summator("Сума числел: ",2,2,3,3,4, type = "summator"))
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# def info(value, *types, names_autor="Mik", **values):
+#     print("Тип:", type(values))
+#     print("Аргумент:", values)
+#     for key, value in values.items():
+#         print(key,value)
+#     print(types)
+#
+# info("Пример использования параметров всех типов", 2,3,4, names_autor= "Mikhail", course = "Python")
+
+def my_sum(n, *args, txt = "Сумма чисел"):
+    s = 0
+    for i in range(len(args)):
+        s += args[i] ** n
+    print(txt + ":", s)
+
+my_sum(1,1,2,3,4,5)
+my_sum(2,2,3,4,5, txt = "Сумма квадратов")
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

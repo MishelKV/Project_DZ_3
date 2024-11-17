@@ -7,9 +7,4 @@ def divide(first , second):
         division = first / second
         return division
 
-def main():
-    print('Тест')
-
-if __name__ == '__main__':
-    main()
 
