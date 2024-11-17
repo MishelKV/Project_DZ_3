@@ -5,9 +5,3 @@ def divide(first , second):
     else:
         division = first / second
         return division
-
-def main():
-    print('Тест')
-
-if __name__ == '__main__':
-    main()
