@@ -5,8 +5,10 @@ def get_multiplied_digits(number):
         return first * get_multiplied_digits(int(str_number[1:]))
     else:
         first=int(str_number)
+        if first == 0:
+            first = 1
         return first
 
-result = get_multiplied_digits(40203)
+result = get_multiplied_digits(40203000)
 print(result)
 
