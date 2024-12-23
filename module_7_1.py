@@ -22,10 +22,12 @@ class Shop:
         file = open(self.__file_name, 'a+')  # a+ считывает и добавляет информацию в файл
         file.seek(0)    # переходим в начало файла
         for i in file:
-            list_products.append(i.rstrip()) # rstrip() - удаляет  последний символ в строке (конец строки. \n)
+            name = i.split(', ')[0]
+            list_products.append(name)
+            # list_products.append(i.rstrip()) # rstrip() - удаляет  последний символ в строке (конец строки. \n)
         for j in products:
-            if str(j) in list_products:
-                print(f'Продукт {j} уже есть в магазине')
+            if j.name in list_products:
+                print(f'Продукт {j.name} уже есть в магазине')
             else:
                 file.write(f'{j}\n')
         file.close()
